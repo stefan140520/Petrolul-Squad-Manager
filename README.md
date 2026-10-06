@@ -34,11 +34,11 @@ Details per stage: see the `ai-log/` folder.
 
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
-| S1-R1 | README: description, fields, sample data, how to run | [LINK_CATRE_README] | read |
-| S1-R2 | AI usage section | [LINK_CATRE_README] | read |
-| S1-R3 | AI log for stage 1 | [LINK_CATRE_ETAPA_01_MD] | read |
-| S1-R4 | header, form (text + select), 3 cards with own data | [LINK_CATRE_INDEX_HTML] | open the page |
-| S1-R5 | finished card looks different | [LINK_CATRE_STYLE_CSS_DONE] | look at the card |
-| S1-R6 | 2 columns on desktop, 1 under 700px | [LINK_CATRE_STYLE_CSS_MEDIA] | resize < 700px |
-| S1-R7 | visible focus, readable dark theme | [LINK_CATRE_STYLE_CSS_DARK] | Tab; dark mode |
-| S1-R8 | commit "Stage 1" pushed | [LINK_CATRE_ISTORIC_COMMITURI] | commit history |
+| S1-R1 | README: description, fields, sample data, how to run | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md] | read |
+| S1-R2 | AI usage section | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-01.md] | read |
+| S1-R3 | AI log for stage 1 | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-01.md] | read |
+| S1-R4 | header, form (text + select), 3 cards with own data | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/2e410af3c1587299229678dcc07e8f01defd3264/index.html#L10-L64] | open the page |
+| S1-R5 | finished card looks different | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/2e410af3c1587299229678dcc07e8f01defd3264/style.css#L120-L124] | look at the card |
+| S1-R6 | 2 columns on desktop, 1 under 700px | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/2e410af3c1587299229678dcc07e8f01defd3264/style.css#L132-L135] | resize < 700px |
+| S1-R7 | visible focus, readable dark theme | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/2e410af3c1587299229678dcc07e8f01defd3264/style.css#L137-L151] | Tab; dark mode |
+| S1-R8 | commit "Stage 1" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/2e410af3c1587299229678dcc07e8f01defd3264] | commit history |
