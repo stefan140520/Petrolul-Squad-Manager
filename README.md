@@ -25,9 +25,14 @@ Sample data used across all stages:
 
 Details per stage: see the `ai-log/` folder.
 
+## Stage 2: data logic
+Plain JavaScript, no DOM. jucatori.js holds the array and the functions
+that read and change it. Results are printed in the browser console (F12).
+
 ## Status
 - [x] Stage 1: static mockup
-- [ ] Stage 2: data logic in JavaScript
+- [x] Stage 2: data logic in JavaScript
+- [ ] Stage 3: Vite and React project
 
 
 
@@ -41,4 +46,14 @@ Details per stage: see the `ai-log/` folder.
 | S1-R5 | finished card looks different | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/2e410af3c1587299229678dcc07e8f01defd3264/style.css#L120-L124] | look at the card |
 | S1-R6 | 2 columns on desktop, 1 under 700px | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/2e410af3c1587299229678dcc07e8f01defd3264/style.css#L132-L135] | resize < 700px |
 | S1-R7 | visible focus, readable dark theme | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/2e410af3c1587299229678dcc07e8f01defd3264/style.css#L137-L151] | Tab; dark mode |
-| S1-R8 | commit "Stage 1" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/2e410af3c1587299229678dcc07e8f01defd3264] | commit history |
+| S1-R8 | commit "Stage 1" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/2e410af3c1587299229678dcc07e8f01defd3264] | commit history |git add README.md
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S2-R1 | JS file linked, logs on page load | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/792371881bacddac3b9c775d91cd7a105de8a348/index.html#L67] | open page, F12 |
+| S2-R2 | 3+ items with id, name, state, tag | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/792371881bacddac3b9c775d91cd7a105de8a348/jucatori.js#L2-L6] | read |
+| S2-R3 | list, count, search, add, toggle, delete | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/792371881bacddac3b9c775d91cd7a105de8a348/jucatori.js#L76-L90] | console output |
+| S2-R4 | add rejects empty name and invalid tag | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/792371881bacddac3b9c775d91cd7a105de8a348/jucatori.js#L36-L41] | last 2 console lines |
+| S2-R5 | original array unchanged after add | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/792371881bacddac3b9c775d91cd7a105de8a348/jucatori.js#L84] | console line |
+| S2-R6 | README Stage 2 section + AI log | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md] | read |
+| S2-R7 | commit "Stage 2" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/792371881bacddac3b9c775d91cd7a105de8a348] | commit history |
