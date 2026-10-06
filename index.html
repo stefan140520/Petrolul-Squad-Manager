@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Petrolul Squad Manager - mockup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Petrolul Squad</h1>
+    <p>Gestionează lotul pentru următorul meci de pe Ilie Oană.</p>
+    <p class="app-count">3 jucători, dintre care 2 titulari</p>
+  </header>
+  
+  <main class="container">
+    <section class="panel">
+      <h2>Adaugă jucător</h2>
+      <form class="item-form">
+        <label>Nume <input type="text" name="nume" placeholder="Ex: Alexandru Tudorie" /></label>
+        <label>Post
+          <select name="post">
+            <option value="atacant">Atacant</option>
+            <option value="mijlocas">Mijlocaș</option>
+            <option value="fundas">Fundaș</option>
+            <option value="portar">Portar</option>
+          </select>
+        </label>
+        <button type="submit">Adaugă</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Lotul meu</h2>
+      <!-- Când lista e goală: <p class="empty">Nu există niciun element.</p> -->
+      <ul class="item-list">
+        
+        <li class="item-card">
+          <div>
+            <h3>Gheorghe Grozav</h3>
+            <span class="badge badge-atacant">Atacant</span>
+          </div>
+          <span class="status">Titular</span>
+        </li>
+        
+        <li class="item-card done">
+          <div>
+            <h3>Paul Papp</h3>
+            <span class="badge badge-fundas">Fundaș</span>
+          </div>
+          <span class="status">Rezervă</span>
+        </li>
+        
+        <li class="item-card">
+          <div>
+            <h3>Sergiu Hanca</h3>
+            <span class="badge badge-mijlocas">Mijlocaș</span>
+          </div>
+          <span class="status">Titular</span>
+        </li>
+        
+      </ul>
+    </section>
+  </main>
+  
+  <footer class="app-footer">Proiect Tehnologii Web</footer>
+</body>
+</html>
