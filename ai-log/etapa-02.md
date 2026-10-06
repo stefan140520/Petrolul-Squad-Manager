@@ -4,7 +4,7 @@
 - Gemini
 
 ## Conversations
-Link: (Aici adaugi link-ul de Share din conversația noastră curentă)
+Link: (https://gemini.google.com/app/b81ecd4c875a0f3b?hl=ro)
 
 ## Key requests
 ### 1. Scrierea funcțiilor imutabile de array pe baza temei
