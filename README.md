@@ -57,3 +57,16 @@ that read and change it. Results are printed in the browser console (F12).
 | S2-R5 | original array unchanged after add | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/792371881bacddac3b9c775d91cd7a105de8a348/jucatori.js#L84] | console line |
 | S2-R6 | README Stage 2 section + AI log | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md] | read |
 | S2-R7 | commit "Stage 2" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/792371881bacddac3b9c775d91cd7a105de8a348] | commit history |
+## Stage 3: Vite and React project
+The app now lives in frontend/, built with Vite. The data from stage 2
+moved into the main component; the list is still printed raw.
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S3-R1 | npm run dev starts without errors | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/frontend/package.json] | npm install, npm run dev |
+| S3-R2 | app name and counter computed from data | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/98654c737ff48faca5911a172e1ad0e861562c87/frontend/src/App.jsx#L11-L21] | edit data, save |
+| S3-R3 | data from README, not from the example | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/98654c737ff48faca5911a172e1ad0e861562c87/frontend/src/App.jsx#L2-L6] | compare with README |
+| S3-R4 | stage 1 styles reused | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/frontend/src/App.css] | look at the page |
+| S3-R5 | node_modules ignored, build passes | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/frontend/.gitignore] | npm run build |
+| S3-R6 | README Stage 3 section + AI log | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md], [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-03.md] | read |
+| S3-R7 | commit "Stage 3" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/98654c737ff48faca5911a172e1ad0e861562c87] | commit history |
