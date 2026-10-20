@@ -25,15 +25,17 @@ Sample data used across all stages:
 
 Details per stage: see the `ai-log/` folder.
 
-## Stage 2: data logic
-Plain JavaScript, no DOM. jucatori.js holds the array and the functions
-that read and change it. Results are printed in the browser console (F12).
+## Stage 4: components
+The list is rendered from the data, through two components:
+JucatoriList receives the whole array and renders one card per item
+JucatorCard receives a single item through props and displays it
 
 ## Status
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
-- [ ] Stage 3: Vite and React project
-
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [ ] Stage 5: local state and events
 
 
 
@@ -61,6 +63,16 @@ that read and change it. Results are printed in the browser console (F12).
 The app now lives in frontend/, built with Vite. The data from stage 2
 moved into the main component; the list is still printed raw.
 
+## How to run
+cd frontend
+npm install
+npm run dev
+Then open the address printed in the terminal (http://localhost:5173).
+
+## Status
+- [x] Stage 1: static mockup
+- [x] Stage 2: data logic in JavaScript
+- [x] Stage 3: Vite and React projectcd ..
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
 | S3-R1 | npm run dev starts without errors | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/frontend/package.json] | npm install, npm run dev |
