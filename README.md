@@ -82,3 +82,13 @@ Then open the address printed in the terminal (http://localhost:5173).
 | S3-R5 | node_modules ignored, build passes | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/frontend/.gitignore] | npm run build |
 | S3-R6 | README Stage 3 section + AI log | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md], [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-03.md] | read |
 | S3-R7 | commit "Stage 3" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/98654c737ff48faca5911a172e1ad0e861562c87] | commit history |
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S4-R1 | 2+ components in src/components/ | [https://github.com/stefan140520/Petrolul-Squad-Manager/tree/main/frontend/src/components] | open folder |
+| S4-R2 | card receives data through props | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/25b93e81b5e7e1b9f087eba4ccb8e8ee36596aec/frontend/src/components/JucatorCard.jsx#L9-L21] | read |
+| S4-R3 | map + key={id}, no console warnings | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/25b93e81b5e7e1b9f087eba4ccb8e8ee36596aec/frontend/src/components/JucatoriList.jsx#L12-L13] | F12, Console |
+| S4-R4 | message for empty list | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/25b93e81b5e7e1b9f087eba4ccb8e8ee36596aec/frontend/src/components/JucatoriList.jsx#L5] | set array to [] |
+| S4-R5 | state changes the card look | [Lhttps://github.com/stefan140520/Petrolul-Squad-Manager/blob/25b93e81b5e7e1b9f087eba4ccb8e8ee36596aec/frontend/src/components/JucatorCard.jsx#L11] | toggle a done flag |
+| S4-R6 | README Stage 4 section + AI log | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md], [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-04.md] | read |
+| S4-R7 | commit "Stage 4" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/25b93e81b5e7e1b9f087eba4ccb8e8ee36596aec] | commit history |
