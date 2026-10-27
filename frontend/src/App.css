@@ -373,3 +373,65 @@ body {
   margin-right: 5px;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
+/* Layout pe două coloane: Stânga (Meci) / Dreapta (Lot) */
+.layout-principal {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* Stânga fix 320px, dreapta restul */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Responsivitate pentru ecrane mai mici (tablete/telefoane) */
+@media (max-width: 900px) {
+  .layout-principal {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Designul casetei pentru următorul meci */
+.meci-sidebar .panel {
+  position: sticky;
+  top: 20px;
+}
+
+.meci-card-info {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #f3f4f6;
+}
+
+.meci-competitie {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #facc15;
+  font-weight: bold;
+}
+
+.meci-echipe {
+  font-size: 1.15rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #facc15;
+  text-align: center;
+}
+
+.meci-detalii {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+.meci-status {
+  margin-top: 5px;
+  background: rgba(250, 204, 21, 0.15);
+  color: #facc15;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
