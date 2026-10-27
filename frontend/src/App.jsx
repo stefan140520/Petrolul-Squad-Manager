@@ -1,18 +1,53 @@
+import { useState } from "react";
 import JucatoriList from "./components/JucatoriList.jsx";
 
-// Datele jucătorilor
-const jucatori = [
+// Datele jucătorilor - valoarea inițială
+const JUCATORI_INITIALI = [
   { id: 1, nume: "Gheorghe Grozav", rezerva: false, post: "atacant" },
   { id: 2, nume: "Paul Papp", rezerva: true, post: "fundas" },
   { id: 3, nume: "Sergiu Hanca", rezerva: false, post: "mijlocas" }
 ];
 
+function temaInitiala() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
 export default function App() {
+  const [jucatori, setJucatori] = useState(JUCATORI_INITIALI);
+  const [tema, setTema] = useState(temaInitiala);
+
+  // Funcția care schimbă starea din titular în rezervă și invers
+  function handleToggle(id) {
+    setJucatori((prev) =>
+      prev.map((j) => (j.id === id ? { ...j, rezerva: !j.rezerva } : j))
+    );
+  }
+
+  // Funcția care șterge un jucător
+  function handleDelete(id) {
+    setJucatori((prev) => prev.filter((j) => j.id !== id));
+  }
+
+  // Funcția pentru Dark/Light Mode
+  function handleTema() {
+    const noua = tema === "dark" ? "light" : "dark";
+    setTema(noua);
+    document.documentElement.dataset.theme = noua;
+  }
+
+  // Calculăm numărul de titulari direct din state (valoare derivată)
   const titulari = jucatori.filter((j) => !j.rezerva).length;
 
   return (
     <>
       <header className="app-header">
+        <button 
+          className="theme-toggle" 
+          onClick={handleTema} 
+          aria-pressed={tema === "dark"}
+        >
+          {tema === "dark" ? "Mod luminos" : "Mod întunecat"}
+        </button>
         <h1>Petrolul Squad</h1>
         <p>Gestionează lotul pentru următorul meci de pe Ilie Oană.</p>
         <p className="app-count">
@@ -23,8 +58,11 @@ export default function App() {
       <main className="container">
         <section className="panel">
           <h2>Lotul meu</h2>
-          {/* Am înlocuit pre-ul (JSON) cu componenta ce desenează lista */}
-          <JucatoriList listaJucatori={jucatori} />
+          <JucatoriList 
+            listaJucatori={jucatori} 
+            onToggle={handleToggle} 
+            onDelete={handleDelete} 
+          />
         </section>
       </main>
     </>
