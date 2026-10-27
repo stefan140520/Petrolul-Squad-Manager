@@ -92,3 +92,28 @@ Then open the address printed in the terminal (http://localhost:5173).
 | S4-R5 | state changes the card look | [Lhttps://github.com/stefan140520/Petrolul-Squad-Manager/blob/25b93e81b5e7e1b9f087eba4ccb8e8ee36596aec/frontend/src/components/JucatorCard.jsx#L11] | toggle a done flag |
 | S4-R6 | README Stage 4 section + AI log | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md], [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-04.md] | read |
 | S4-R7 | commit "Stage 4" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/commit/25b93e81b5e7e1b9f087eba4ccb8e8ee36596aec] | commit history |
+
+## Stage 5: local state and events
+The list lives in React state. Checking and deleting work from the page,
+and the counters in the header follow automatically. A button in the
+header switches between light and dark mode. Changes are lost on refresh,
+which is what stage 6 and stage 10 fix.
+
+## Status
+- [x] Stage 1: static mockup
+- [x] Stage 2: data logic in JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [x] Stage 5: local state and events
+- [ ] Stage 6: loading data from a mock API
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S5-R1 | list kept in useState, in App | [LINK_App_useState] | read |
+| S5-R2 | toggling changes state and card look | [LINK_App_handleToggle_si_JucatorCard_checkbox] | click a checkbox |
+| S5-R3 | delete removes the item | [LINK_App_handleDelete_si_JucatorCard_buton] | click Delete |
+| S5-R4 | header counter derived, not in state | [LINK_App_Titulari_Derivat] | toggle, watch header |
+| S5-R5 | immutable updates (no push, splice) | [LINK_App_Imutabil_Map_Filter] | read |
+| S5-R6 | light/dark toggle: state + data-theme | [LINK_App_Theme_si_AppCSS] | click the button |
+| S5-R7 | no console warnings; README + AI log | [LINK_README_AILOG] | F12, Console |
+| S5-R8 | commit "Stage 5" pushed | [LINK_COMMIT_STAGE_5] | commit history |

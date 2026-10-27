@@ -14,6 +14,14 @@ export default function JucatorCard({ jucator, onToggle, onDelete }) {
           checked={jucator.rezerva}
           onChange={() => onToggle(jucator.id)}
         />
+        
+        {/* Emblema clubului lângă numele jucătorului */}
+        <img 
+          src="emblema.jpg" 
+          alt="Emblema Petrolul" 
+          className="player-emblem" 
+        />
+
         <div>
           <h3>{jucator.nume}</h3>
           <span className={`badge badge-${jucator.post}`}>

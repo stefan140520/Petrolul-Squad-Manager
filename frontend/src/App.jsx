@@ -3,9 +3,13 @@ import JucatoriList from "./components/JucatoriList.jsx";
 
 // Datele jucătorilor - valoarea inițială
 const JUCATORI_INITIALI = [
-  { id: 1, nume: "Gheorghe Grozav", rezerva: false, post: "atacant" },
-  { id: 2, nume: "Paul Papp", rezerva: true, post: "fundas" },
-  { id: 3, nume: "Sergiu Hanca", rezerva: false, post: "mijlocas" }
+  { id: 1, nume: "Lukas Zima", rezerva: false, post: "portar" },
+  { id: 2, nume: "N'Lundulu Dan", rezerva: false, post: "fundas" },
+  { id: 3, nume: "Paul Papp", rezerva: true, post: "fundas" },
+  { id: 4, nume: "Sergiu Hanca", rezerva: false, post: "mijlocas" },
+  { id: 5, nume: "Martins Rodrigo", rezerva: false, post: "atacant" },
+  { id: 6, nume: "Lucho Vega", rezerva: true, post: "atacant" },
+  { id: 7, nume: "Tutu Mark", rezerva: true, post: "mijlocas" }
 ];
 
 function temaInitiala() {

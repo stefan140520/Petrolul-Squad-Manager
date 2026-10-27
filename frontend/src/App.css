@@ -222,3 +222,154 @@ body {
     --shadow: none;
   }
 }
+/* --- DESIGN NOU PENTRU PETROLUL SQUAD --- */
+
+/* 1. Aranjăm cardurile jucătorilor unul lângă altul sau într-o listă modernă spațiată */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* 2. Fiecare card devine o bandă elegantă, cu nuanțe specifice Petrolului (Galben/Albastru închis) */
+.item-card {
+  background: linear-gradient(135deg, #facc15, #eab308); /* Galben auriu */
+  color: #111827; /* Text negru/închis pentru vizibilitate maximă */
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-2px);
+}
+
+/* 3. Dacă jucătorul este rezervă (bifat), cardul devine gri-argintiu */
+.item-card.done {
+  background: linear-gradient(135deg, #9ca3af, #4b5563);
+  color: #f3f4f6;
+  opacity: 0.85;
+}
+
+.item-card.done h3 {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+/* 4. Aranjarea textului și a etichetei de post din interiorul cardului */
+.item-main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.item-main input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #1e1b4b; /* Albastru închis */
+  cursor: pointer;
+}
+
+.item-main h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* 5. Butonul de ștergere stilizat modern */
+.btn-danger {
+  background-color: #ef4444; /* Roșu vibrant */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+/* 6. Curățarea aspectului panoului principal */
+.panel {
+  background: rgba(30, 27, 46, 0.85); /* Fundal semi-transparent elegant */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.panel h2 {
+  color: #facc15; /* Titlul lotului pe galben */
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgba(250, 204, 21, 0.3);
+  padding-bottom: 10px;
+}
+/* --- ANTETUL PRINCIPAL (HEADER) --- */
+.app-header {
+  position: relative;
+  background-image: linear-gradient(rgba(10, 10, 20, 0.75), rgba(10, 10, 20, 0.95)), url('/petrolul.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 4px solid #facc15; /* Linie fină galbenă la baza antetului */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Titlul principal stilizat */
+.app-header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, #ffffff 30%, #facc15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
+}
+
+/* Subtitlul / Sloganul */
+.app-header p {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+/* Contorul de jucători / Titulari stilizat ca o etichetă sportivă */
+.app-count {
+  display: inline-block;
+  background-color: rgba(250, 204, 21, 0.15);
+  border: 1px solid #facc15;
+  color: #facc15;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+/* Dimensiunea și stilul pentru emblema Petrolul din carduri */
+.player-emblem {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-right: 5px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
