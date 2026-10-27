@@ -109,11 +109,11 @@ which is what stage 6 and stage 10 fix.
 
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
-| S5-R1 | list kept in useState, in App | [LINK_App_useState] | read |
-| S5-R2 | toggling changes state and card look | [LINK_App_handleToggle_si_JucatorCard_checkbox] | click a checkbox |
-| S5-R3 | delete removes the item | [LINK_App_handleDelete_si_JucatorCard_buton] | click Delete |
-| S5-R4 | header counter derived, not in state | [LINK_App_Titulari_Derivat] | toggle, watch header |
-| S5-R5 | immutable updates (no push, splice) | [LINK_App_Imutabil_Map_Filter] | read |
-| S5-R6 | light/dark toggle: state + data-theme | [LINK_App_Theme_si_AppCSS] | click the button |
-| S5-R7 | no console warnings; README + AI log | [LINK_README_AILOG] | F12, Console |
-| S5-R8 | commit "Stage 5" pushed | [LINK_COMMIT_STAGE_5] | commit history |
+| S5-R1 | list kept in useState, in App | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/55ea3eedfa95967443aeac7a237fe20a723054f2/frontend/src/App.jsx#L20] | read |
+| S5-R2 | toggling changes state and card look | [] | click a checkbox |
+| S5-R3 | delete removes the item | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/55ea3eedfa95967443aeac7a237fe20a723054f2/frontend/src/App.jsx#L24 ] | click Delete |
+| S5-R4 | header counter derived, not in state | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/55ea3eedfa95967443aeac7a237fe20a723054f2/frontend/src/App.jsx#L24] | toggle, watch header |
+| S5-R5 | immutable updates (no push, splice) | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/55ea3eedfa95967443aeac7a237fe20a723054f2/frontend/src/App.jsx#L43] | read |
+| S5-R6 | light/dark toggle: state + data-theme | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/55ea3eedfa95967443aeac7a237fe20a723054f2/frontend/src/App.jsx#L31] | click the button |
+| S5-R7 | no console warnings; README + AI log | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/55ea3eedfa95967443aeac7a237fe20a723054f2/frontend/src/App.jsx#L36] [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/55ea3eedfa95967443aeac7a237fe20a723054f2/frontend/src/App.css#L204-L212] | F12, Console |
+| S5-R8 | commit "Stage 5" pushed | [https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/README.md] | commit history |
