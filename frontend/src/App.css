@@ -435,3 +435,22 @@ body {
   font-size: 0.9rem;
   font-weight: bold;
 }
+/* Etapa 6: Stări de încărcare și de eroare */
+.info { 
+  color: var(--muted, #9ca3af);
+  font-style: italic; 
+}
+
+.error {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+:root[data-theme="dark"] .error {
+  color: #fca5a5;
+  background: #451a1a;
+  border-color: #7f1d1d;
+}

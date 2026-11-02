@@ -1,23 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import JucatoriList from "./components/JucatoriList.jsx";
-
-const JUCATORI_INITIALI = [
-  { id: 1, nume: "Lukas Zima", rezerva: false, post: "portar" },
-  { id: 2, nume: "N'Lundulu Dan", rezerva: false, post: "fundas" },
-  { id: 3, nume: "Paul Papp", rezerva: true, post: "fundas" },
-  { id: 4, nume: "Sergiu Hanca", rezerva: false, post: "mijlocas" },
-  { id: 5, nume: "Martins Rodrigo", rezerva: false, post: "atacant" },
-  { id: 6, nume: "Lucho Vega", rezerva: true, post: "atacant" },
-  { id: 7, nume: "Tutu Mark", rezerva: true, post: "mijlocas" }
-];
+import { fetchJucatori } from "./api.js";
 
 function temaInitiala() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 export default function App() {
-  const [jucatori, setJucatori] = useState(JUCATORI_INITIALI);
+  const [jucatori, setJucatori] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [tema, setTema] = useState(temaInitiala);
+
+  // Rulează o singură dată, după prima randare
+  useEffect(() => {
+    let ignore = false;
+    async function load() {
+      try {
+        const data = await fetchJucatori();
+        if (!ignore) setJucatori(data);
+      } catch (err) {
+        if (!ignore) setError(err.message);
+      } finally {
+        if (!ignore) setLoading(false);
+      }
+    }
+    load();
+    return () => {
+      ignore = true;
+    };
+  }, []);
 
   function handleToggle(id) {
     setJucatori((prev) =>
@@ -55,7 +67,6 @@ export default function App() {
       </header>
 
       <main className="container layout-principal">
-        {/* Partea stângă: Următorul Meci */}
         <aside className="meci-sidebar">
           <div className="panel">
             <h2>Următorul Meci</h2>
@@ -71,14 +82,21 @@ export default function App() {
           </div>
         </aside>
 
-        {/* Partea dreaptă: Lotul de jucători */}
         <section className="panel lot-section">
           <h2>Lotul meu</h2>
-          <JucatoriList
-            listaJucatori={jucatori}
-            onToggle={handleToggle}
-            onDelete={handleDelete}
-          />
+          {loading && <p className="info">Se încarcă lista...</p>}
+          {error && (
+            <p className="error">
+              Nu am putut încărca datele: {error}. Rulează <code>npm run api</code>?
+            </p>
+          )}
+          {!loading && !error && (
+            <JucatoriList
+              listaJucatori={jucatori}
+              onToggle={handleToggle}
+              onDelete={handleDelete}
+            />
+          )}
         </section>
       </main>
     </>
