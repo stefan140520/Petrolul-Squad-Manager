@@ -130,10 +130,10 @@ npm run dev    # terminal 2, http://localhost:5173
 
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
-| S6-R1 | npm run api starts, route shows JSON | [package.json / db.json](LINK_PACKAGE_JSON_SAU_DB) | open localhost:3001/jucatori |
-| S6-R2 | data no longer in React code | [App.jsx useState([])](LINK_APP_JSX_STATE_GOL) | read |
-| S6-R3 | loading message while waiting | [App.jsx loading state](LINK_APP_JSX_LOADING) | -delay 3000 |
-| S6-R4 | error message when API is down | [App.jsx error state](LINK_APP_JSX_ERROR) | stop npm run api, refresh |
-| S6-R5 | fetch only in api.js, URL from env | [src/api.js + .env.example](LINK_API_JS) | search for fetch |
-| S6-R6 | README Stage 6 section + AI log | [README.md & ai-log/etapa-06.md](LINK_README) | read |
-| S6-R7 | commit "Stage 6" pushed | [Commit Stage 6](LINK_COMMIT) | commit history |
+| S6-R1 | npm run api starts, route shows JSON | [package.json / db.json](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/e0009a7d7f094bb73667a29fbeda0003d18331ef/frontend/package.json#L11) | open localhost:3001/jucatori |
+| S6-R2 | data no longer in React code | [App.jsx useState([])](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/e0009a7d7f094bb73667a29fbeda0003d18331ef/frontend/src/App.jsx#L10) | read |
+| S6-R3 | loading message while waiting | [App.jsx loading state](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/e0009a7d7f094bb73667a29fbeda0003d18331ef/frontend/src/App.jsx#L87) | -delay 3000 |
+| S6-R4 | error message when API is down | [App.jsx error state](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/e0009a7d7f094bb73667a29fbeda0003d18331ef/frontend/src/App.jsx#L88-L92) | stop npm run api, refresh |
+| S6-R5 | fetch only in api.js, URL from env | [src/api.js + .env.example](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/e0009a7d7f094bb73667a29fbeda0003d18331ef/frontend/src/api.js#L5) | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | [README.md & ai-log/etapa-06.md](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-06.md) | read |
+| S6-R7 | commit "Stage 6" pushed | [Commit Stage 6](https://github.com/stefan140520/Petrolul-Squad-Manager/commit/e0009a7d7f094bb73667a29fbeda0003d18331ef) | commit history |
