@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import JucatoriList from "./components/JucatoriList.jsx";
-import { fetchJucatori } from "./api.js";
+import JucatorForm from "./components/JucatorForm.jsx";
+import {
+  createJucator,
+  deleteJucator,
+  fetchJucatori,
+  updateJucator,
+} from "./api.js";
 
 function temaInitiala() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -12,7 +18,6 @@ export default function App() {
   const [error, setError] = useState(null);
   const [tema, setTema] = useState(temaInitiala);
 
-  // Rulează o singură dată, după prima randare
   useEffect(() => {
     let ignore = false;
     async function load() {
@@ -31,14 +36,29 @@ export default function App() {
     };
   }, []);
 
-  function handleToggle(id) {
-    setJucatori((prev) =>
-      prev.map((j) => (j.id === id ? { ...j, rezerva: !j.rezerva } : j))
-    );
+  // Întâi serverul, apoi state-ul: pe ecran ajunge doar ce s-a salvat
+  async function handleAdd(jucatorNou) {
+    const creat = await createJucator(jucatorNou);
+    setJucatori((prev) => [...prev, creat]);
   }
 
-  function handleDelete(id) {
-    setJucatori((prev) => prev.filter((j) => j.id !== id));
+  async function handleToggle(id) {
+    const jucator = jucatori.find((j) => j.id === id);
+    try {
+      const actualizat = await updateJucator(id, { rezerva: !jucator.rezerva });
+      setJucatori((prev) => prev.map((j) => (j.id === id ? actualizat : j)));
+    } catch (err) {
+      setError(err.message);
+    }
+  }
+
+  async function handleDelete(id) {
+    try {
+      await deleteJucator(id);
+      setJucatori((prev) => prev.filter((j) => j.id !== id));
+    } catch (err) {
+      setError(err.message);
+    }
   }
 
   function handleTema() {
@@ -67,8 +87,14 @@ export default function App() {
       </header>
 
       <main className="container layout-principal">
+        {/* Coloana din stânga: Formular adăugare + Info Următorul Meci */}
         <aside className="meci-sidebar">
-          <div className="panel">
+          <section className="panel">
+            <h2>Adaugă jucător</h2>
+            <JucatorForm onAdd={handleAdd} />
+          </section>
+
+          <section className="panel">
             <h2>Următorul Meci</h2>
             <div className="meci-card-info">
               <span className="meci-competitie">SuperLiga • Etapa 14</span>
@@ -79,18 +105,23 @@ export default function App() {
               <p className="meci-detalii">🏟️ Stadionul „Ilie Oană”, Ploiești</p>
               <div className="meci-status">Se joacă acasă 🐺</div>
             </div>
-          </div>
+          </section>
         </aside>
 
+        {/* Coloana din dreapta: Lotul de jucători */}
         <section className="panel lot-section">
           <h2>Lotul meu</h2>
-          {loading && <p className="info">Se încarcă lista...</p>}
+          {loading && (
+            <p className="info" data-testid="loading">
+              Se încarcă lista...
+            </p>
+          )}
           {error && (
-            <p className="error">
+            <p className="error" data-testid="error">
               Nu am putut încărca datele: {error}. Rulează <code>npm run api</code>?
             </p>
           )}
-          {!loading && !error && (
+          {!loading && (
             <JucatoriList
               listaJucatori={jucatori}
               onToggle={handleToggle}

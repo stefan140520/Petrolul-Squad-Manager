@@ -454,3 +454,75 @@ body {
   background: #451a1a;
   border-color: #7f1d1d;
 }
+/* --- ETAPA 7: FORMULAR ADĂUGARE JUCĂTOR --- */
+.meci-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.meci-sidebar .panel {
+  position: static; /* dezactivăm sticky ca să încapă ambele panouri din stânga */
+}
+
+.jucator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.jucator-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f3f4f6;
+}
+
+.jucator-form input,
+.jucator-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 15, 25, 0.85);
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.jucator-form input:focus,
+.jucator-form select:focus {
+  border-color: #facc15;
+}
+
+/* Marcarea câmpului cu eroare de validare */
+.jucator-form input[aria-invalid="true"] {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+}
+
+.jucator-form button[type="submit"] {
+  margin-top: 4px;
+  background: linear-gradient(135deg, #facc15, #eab308);
+  color: #111827;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.2s;
+}
+
+.jucator-form button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Buton dezactivat cât timp se trimite cererea */
+.jucator-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
