@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summary {
+  margin-top: -8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.meciInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meciCompetitie {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.meciEchipe {
+  font-size: 1.1rem;
+  background: var(--accent-soft);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  text-align: center;
+}
+
+.meciDetaliu {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.meciStatus {
+  background: var(--accent-soft);
+  color: var(--accent);
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

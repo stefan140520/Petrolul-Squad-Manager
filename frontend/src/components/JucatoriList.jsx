@@ -1,4 +1,5 @@
 import JucatorCard from "./JucatorCard.jsx";
+import styles from "./JucatoriList.module.css";
 
 export default function JucatoriList({ listaJucatori, onToggle, onDelete }) {
   if (listaJucatori.length === 0) {
@@ -10,7 +11,7 @@ export default function JucatoriList({ listaJucatori, onToggle, onDelete }) {
   }
 
   return (
-    <ul className="item-list">
+    <ul className={styles.list}>
       {listaJucatori.map((jucator) => (
         <JucatorCard
           key={jucator.id}

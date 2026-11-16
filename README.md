@@ -157,5 +157,6 @@ in the list.
 | S7-R4 | toggle and delete survive refresh | [App.jsx (handleToggle / handleDelete)](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/1c2e73c6e3bbad32b0de9f28da15c6a646c120ac/frontend/src/App.jsx#L45) | toggle/delete, refresh |
 | S7-R5 | button disabled while sending, form cleared only on success | [JucatorForm.jsx (handleSubmit)](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/1c2e73c6e3bbad32b0de9f28da15c6a646c120ac/frontend/src/components/JucatorForm.jsx#L37-L45) | --delay 3000; stop API and submit |
 | S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json & JucatorCard.jsx](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/tw.json) | querySelectorAll in the console |
-| S7-R7 | README Stage 7 section + AI log | [README.md & ai-log/etapa-07.md](LINK_S7_R7) | read |
-| S7-R8 | commit "Stage 7" pushed | [Commit Stage 7](LINK_S7_R8) | commit history |
+| S7-R7 | README Stage 7 section + AI log | [README.md & ai-log/etapa-07.md](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-07.md) | read |
+| S7-R8 | commit "Stage 7" pushed | [Commit Stage 7](https://github.com/stefan140520/Petrolul-Squad-Manager/commit/b5932380d6fae2e938bee684119ee451b0c13629) | commit history |
+

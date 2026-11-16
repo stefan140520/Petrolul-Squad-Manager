@@ -1,11 +1,6 @@
 import { useState } from "react";
-
-const POSTURI = [
-  { value: "portar", label: "Portar" },
-  { value: "fundas", label: "Fundaș" },
-  { value: "mijlocas", label: "Mijlocaș" },
-  { value: "atacant", label: "Atacant" },
-];
+import { POSTURI } from "../constants.js";
+import styles from "./JucatorForm.module.css";
 
 const NUME_MAX = 60;
 
@@ -24,7 +19,7 @@ export default function JucatorForm({ onAdd }) {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault(); // oprește reîncărcarea paginii
+    e.preventDefault();
     const mesaj = valideaza();
     if (mesaj) {
       setEroare(mesaj);
@@ -45,7 +40,12 @@ export default function JucatorForm({ onAdd }) {
   }
 
   return (
-    <form className="jucator-form" onSubmit={handleSubmit} noValidate data-testid="form">
+    <form
+      className={styles.form}
+      onSubmit={handleSubmit}
+      noValidate
+      data-testid="form"
+    >
       <label>
         Nume jucător
         <input
@@ -80,7 +80,12 @@ export default function JucatorForm({ onAdd }) {
         </p>
       )}
 
-      <button type="submit" disabled={trimite} data-testid="form-submit">
+      <button
+        type="submit"
+        className="btn"
+        disabled={trimite}
+        data-testid="form-submit"
+      >
         {trimite ? "Se salvează..." : "Adaugă jucător"}
       </button>
     </form>

@@ -1,38 +1,42 @@
-const ETICHETE_POSTURI = {
-  atacant: "Atacant",
-  mijlocas: "Mijlocaș",
-  fundas: "Fundaș",
-  portar: "Portar",
-};
+import { Link } from "react-router-dom";
+import { ETICHETE_POSTURI } from "../constants.js";
+import styles from "./JucatorCard.module.css";
 
 export default function JucatorCard({ jucator, onToggle, onDelete }) {
   return (
     <li
-      className={jucator.rezerva ? "item-card done" : "item-card"}
+      className={jucator.rezerva ? `${styles.card} ${styles.done}` : styles.card}
       data-testid="item"
       data-id={jucator.id}
     >
-      <label className="item-main">
+      <div className={styles.main}>
         <input
           type="checkbox"
           checked={jucator.rezerva}
           onChange={() => onToggle(jucator.id)}
+          aria-label={`Marchează ${jucator.nume}`}
           data-testid="item-toggle"
         />
 
         <img
           src="/emblema.jpg"
           alt="Emblema Petrolul"
-          className="player-emblem"
+          className={styles.emblem}
         />
 
         <div>
-          <h3 data-testid="item-title">{jucator.nume}</h3>
+          <Link
+            to={`/jucatori/${jucator.id}`}
+            className={styles.title}
+            data-testid="item-link"
+          >
+            {jucator.nume}
+          </Link>
           <span className={`badge badge-${jucator.post}`}>
             {ETICHETE_POSTURI[jucator.post]}
           </span>
         </div>
-      </label>
+      </div>
 
       <button
         className="btn-danger"
