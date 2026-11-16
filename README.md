@@ -137,3 +137,25 @@ npm run dev    # terminal 2, http://localhost:5173
 | S6-R5 | fetch only in api.js, URL from env | [src/api.js + .env.example](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/e0009a7d7f094bb73667a29fbeda0003d18331ef/frontend/src/api.js#L5) | search for fetch |
 | S6-R6 | README Stage 6 section + AI log | [README.md & ai-log/etapa-06.md](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/ai-log/etapa-06.md) | read |
 | S6-R7 | commit "Stage 6" pushed | [Commit Stage 6](https://github.com/stefan140520/Petrolul-Squad-Manager/commit/e0009a7d7f094bb73667a29fbeda0003d18331ef) | commit history |
+
+## Stage 7: form and validation
+Players can be added from the page. The form is controlled and validated,
+and every change (add, toggle, delete) goes to the API before it shows up
+in the list.
+
+## Status
+- [x] Stage 6: data from a mock API
+- [x] Stage 7: form and validation
+- [ ] Stage 8: routing and detail page
+## Stage 7 Checklist
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S7-R1 | controlled form: value + onChange on every field | [JucatorForm.jsx](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/1c2e73c6e3bbad32b0de9f28da15c6a646c120ac/frontend/src/components/JucatorForm.jsx#L51-L54) | read |
+| S7-R2 | empty title shows an error, nothing is sent | [JucatorForm.jsx (valideaza)](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/1c2e73c6e3bbad32b0de9f28da15c6a646c120ac/frontend/src/components/JucatorForm.jsx#L18) | submit empty, watch Network |
+| S7-R3 | added item shows in the list and survives refresh | [App.jsx (handleAdd) & api.js](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/1c2e73c6e3bbad32b0de9f28da15c6a646c120ac/frontend/src/App.jsx#L23-L32) | add, refresh |
+| S7-R4 | toggle and delete survive refresh | [App.jsx (handleToggle / handleDelete)](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/1c2e73c6e3bbad32b0de9f28da15c6a646c120ac/frontend/src/App.jsx#L45) | toggle/delete, refresh |
+| S7-R5 | button disabled while sending, form cleared only on success | [JucatorForm.jsx (handleSubmit)](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/1c2e73c6e3bbad32b0de9f28da15c6a646c120ac/frontend/src/components/JucatorForm.jsx#L37-L45) | --delay 3000; stop API and submit |
+| S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json & JucatorCard.jsx](https://github.com/stefan140520/Petrolul-Squad-Manager/blob/main/tw.json) | querySelectorAll in the console |
+| S7-R7 | README Stage 7 section + AI log | [README.md & ai-log/etapa-07.md](LINK_S7_R7) | read |
+| S7-R8 | commit "Stage 7" pushed | [Commit Stage 7](LINK_S7_R8) | commit history |
